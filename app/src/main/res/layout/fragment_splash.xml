@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.splash.SplashFragment">
+
+    <!-- Logo-->
+    <ImageView
+        android:id="@+id/appLogoImg"
+        android:layout_width="@dimen/_200mdp"
+        android:layout_height="@dimen/_200mdp"
+        android:src="@drawable/app_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- App Name-->
+    <TextView
+        style="@style/TextViewLightStyle"
+        android:text="@string/app_name"
+        android:textSize="@dimen/_14font_mdp"
+        android:layout_marginTop="@dimen/_50mdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/appLogoImg"
+        app:layout_constraintStart_toStartOf="@id/appLogoImg"
+        app:layout_constraintTop_toBottomOf="@id/appLogoImg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

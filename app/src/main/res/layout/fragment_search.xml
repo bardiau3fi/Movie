@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.search.SearchFragment">
+    <!--Search-->
+    <EditText
+        android:id="@+id/searchEdt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40mdp"
+        android:layout_margin="@dimen/_10mdp"
+        android:background="@drawable/bg_rounded_dark"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/searchHere"
+        android:maxLines="1"
+        android:padding="@dimen/_10mdp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/philippineSilver"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--List-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/moviesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/_10mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchEdt" />
+    <!--Loading-->
+    <ProgressBar
+        android:id="@+id/searchLoading"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Empty-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emptyItemsLay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchEdt">
+
+        <include layout="@layout/empty_items" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
